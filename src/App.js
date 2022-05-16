@@ -81,7 +81,7 @@ function App() {
       setData(data);
     }
   }
-  const removeData = new Promise((resolve)=>{setTimeout(resolve,15000)})
+  const removeData = new Promise((resolve)=>{setTimeout(resolve,5000)})
    
   useEffect(() => {
     removeData.then(()=>{

@@ -1,0 +1,18 @@
+.result {
+	display: flex;
+	height: 40%;
+	width: 100%;
+	
+}
+.result-container{
+	display : block;
+    background : rgb(126, 125, 125);
+    padding:10px;
+    border-width:2px;
+    border-color:black;
+    border-style:solid;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	
+}

@@ -1,6 +1,6 @@
 import './header.css';
 
-const Header = () => {
+const Header = (props) => {
     return(
       <>
   <div className="header">
@@ -9,7 +9,7 @@ const Header = () => {
   <nav className='nav'>
             <ul className='ul'> 
             <li><a className='li' href="/">Home</a></li>
-            <li><a className='li' href="/History">History</a></li>
+            <li><a className='li' href="/History" onClick={props.renderHistory}>History</a></li>
             <li><a className='li' href="/Help">Help</a></li>
             </ul>
         </nav>

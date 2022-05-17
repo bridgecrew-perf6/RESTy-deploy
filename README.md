@@ -4,5 +4,5 @@ UML
 ![uml](./uml.PNG)
 
 ## phase_3   
-in this phase i used useEffect hook to remove data from the result text area after 15 sec
+in this phase i used useEffect hook to remove data from the result text area after 15 sec  <br>
 [phase-3 PR](https://github.com/idreesalmasri/RESTy-deploy/pull/1)

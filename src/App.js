@@ -44,8 +44,16 @@ function App() {
     setLoading(true);
     if (method === "Get") {
       const response = await fetch(url);
+      console.log(response.headers);
       const data = await response.json();
       setData(data);
+      // let header = await response.headers.get("content-type","cache-control");
+      let header={};
+      header["content-type"]=await response.headers.get("content-type");
+      header["cache-control"]=await response.headers.get("cache-control");
+      header["expires"]=await response.headers.get("expires");
+      header["pragma"]=await response.headers.get("pragma");
+      setHeaders( header );
       let history = {
         
         url: url,
@@ -57,17 +65,15 @@ function App() {
     else if (method === "Post") {
 
     const response = await fetch(url, {
-      
-
+    
         method: "Post",
-        headers: {
-          'Accept': 'application/json',
-          "Content-Type": "application/json",
-          
-        },
         body: JSON.stringify(body) 
       });
-      let header = await response.headers.get("Content-Type");
+      let header={};
+      header["content-type"]=await response.headers.get("content-type");
+      header["cache-control"]=await response.headers.get("cache-control");
+      header["expires"]=await response.headers.get("expires");
+      header["pragma"]=await response.headers.get("pragma");
       setHeaders({ header });
       const data = await response.json();
       setData(data);
@@ -119,7 +125,7 @@ function App() {
       dispatch(addAction(history));
     }
   }
-  const removeData = new Promise((resolve) => { setTimeout(resolve, 15000) })
+  const removeData = new Promise((resolve) => { setTimeout(resolve, 30000) })
 
   useEffect(() => {
     removeData.then(() => {

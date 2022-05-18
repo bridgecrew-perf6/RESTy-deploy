@@ -16,3 +16,33 @@
 	overflow: auto;
 	
 }
+.method{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	height: 50%;
+	border-radius: 5px;
+	align-items: center;
+	 	
+}
+#button {
+	display: inline;
+	background-color: green;
+	color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 0px 5px;
+	margin-left: 5px;
+    cursor: pointer;	
+}
+#url{
+	display: block;
+	background-color: rgb(89, 90, 89);
+	color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 0px 5px;
+	margin :0px 8px;
+	
+	cursor: pointer;	
+}
